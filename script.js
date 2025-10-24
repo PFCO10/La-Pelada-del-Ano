@@ -4,11 +4,11 @@ fetch('data/pruebas.json')
     const lista = document.getElementById('lista-pruebas');
     pruebas.forEach(p => {
       const li = document.createElement('li');
-      li.textContent = `${p.nombre} — ${p.estado}`;
-      if(p.estado === 'confirmada') li.style.color = 'green';
-      if(p.estado === 'pendiente') li.style.color = 'orange';
-      if(p.estado === 'menos pendiente') li.style.color = 'blue';
-      if(p.estado === 'rechazada') li.style.color = 'red';
+      li.textContent = `${p.id}. ${p.nombre}`;
+      if(p.estado === 'confirmada') li.classList.add('confirmada');
+      if(p.estado === 'pendiente') li.classList.add('pendiente');
+      if(p.estado === 'menos pendiente') li.classList.add('menos-pendiente');
+      if(p.estado === 'rechazada') li.classList.add('rechazada');
       lista.appendChild(li);
     });
   });
