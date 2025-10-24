@@ -2,20 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>La Pelada del Ano</title>
+    <title>Olimpiadas Amigos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>La Pelada del Ano</h1>
-        <p>Pruebas físicas confirmadas, pendientes y menos pendientes</p>
+        <h1>Olimpiadas de Amigos</h1>
+        <p>Pruebas físicas, mentales y de habilidad con filtros y medallero</p>
     </header>
-    <main>
-        <section id="pruebas">
-            <h2>Lista de Pruebas</h2>
-            <ul id="lista-pruebas"></ul>
-        </section>
-    </main>
+
+    <section id="filtros">
+        <h2>Filtros</h2>
+        <label for="estadoFiltro">Filtrar por estado:</label>
+        <select id="estadoFiltro">
+            <option value="todos">Todos</option>
+            <option value="confirmada">Confirmadas</option>
+            <option value="pendiente">Pendientes</option>
+            <option value="menos pendiente">Menos pendientes</option>
+            <option value="rechazada">Rechazadas</option>
+        </select>
+
+        <label for="categoriaFiltro">Filtrar por categoría:</label>
+        <select id="categoriaFiltro">
+            <option value="todos">Todos</option>
+            <option value="física">Físicas</option>
+            <option value="mental">Mentales</option>
+            <option value="habilidad">Habilidad</option>
+        </select>
+    </section>
+
+    <section id="medallero">
+        <h2>Medallero</h2>
+        <table id="tabla-puntos">
+            <thead>
+                <tr>
+                    <th>Participante</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section id="pruebas">
+        <h2>Lista de Pruebas</h2>
+        <ul id="lista-pruebas"></ul>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
