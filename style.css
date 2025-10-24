@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0077b6;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.confirmada {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pendiente {
+    background-color: #ff9800;
+    color: white;
+}
+
+.menos-pendiente {
+    background-color: #2196f3;
+    color: white;
+}
+
+.rechazada {
+    background-color: #f44336;
+    color: white;
+}
