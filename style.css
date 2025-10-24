@@ -12,13 +12,9 @@ header {
     color: white;
 }
 
-h1 {
-    margin: 0;
-}
+h1 { margin: 0; }
 
-main {
-    padding: 20px;
-}
+main, section { padding: 20px; }
 
 ul {
     list-style-type: none;
@@ -30,24 +26,47 @@ li {
     margin: 4px 0;
     border-radius: 5px;
     font-weight: bold;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeIn 0.5s forwards;
+    transition: all 0.3s ease;
 }
 
-.confirmada {
-    background-color: #4caf50;
-    color: white;
+li:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transform: scale(1.02);
 }
 
-.pendiente {
-    background-color: #ff9800;
-    color: white;
+/* Estados */
+.confirmada { background-color: #4caf50; color: white; animation: pulse 1.5s infinite; }
+.pendiente { background-color: #ff9800; color: white; }
+.menos-pendiente { background-color: #2196f3; color: white; }
+.rechazada { background-color: #f44336; color: white; }
+
+/* Animaciones */
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.menos-pendiente {
-    background-color: #2196f3;
-    color: white;
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 5px #4caf50; }
+    50% { box-shadow: 0 0 20px #4caf50; }
 }
 
-.rechazada {
-    background-color: #f44336;
+/* Medallero */
+#medallero table {
+    width: 50%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+#medallero th, #medallero td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+#medallero th {
+    background-color: #0077b6;
     color: white;
 }
